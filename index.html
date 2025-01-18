@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Smart UI Logo" style="height: 40px;">
+            <span style="font-size: 24px; color: #fff; margin-left: 10px;">Smart UI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#footer">Blog</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            <button class="login" onclick="location.href='login.html'">Login</button>
+            <button class="signup" onclick="location.href='signup.html'">Signup</button>
+        </div>
+
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <h1><span id="typed-text"></span></h1>
+        <button class="btn-get-started" onclick="location.href='signup.html'">GET STARTED</button>
+    </header>
+
+
+    <!-- Main Section with Course Cards -->
+    <section class="main-content" id="courses">
+        <h2>Top Courses</h2>
+        <div class="course-cards">
+            <div class="card" onmouseenter="showDetails('science')" onmouseleave="hideDetails('science')">
+                <img src="1.jpg" alt="Science Course">
+                <h3>
+                    Science</h3>
+                <p>The Ultimate Science Course</p>
+                <div class="course-details" id="science-details" style="display: none;">
+                    <p>This course offers an in-depth understanding of scientific principles, covering various topics
+                        such as physics, chemistry, and biology. Students will engage in hands-on experiments and
+                        research, fostering critical thinking and problem-solving skills.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Strong foundational knowledge in sciences</li>
+                        <li>Improved analytical skills</li>
+                        <li>Preparation for advanced studies in STEM fields</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('The Ultimate Science Course', 'This course offers an in-depth understanding of scientific principles, covering various topics such as physics, chemistry, and biology. Students will engage in hands-on experiments and research, fostering critical thinking and problem-solving skills. Benefits of this course include strong foundational knowledge in sciences, improved analytical skills, and preparation for advanced studies in STEM fields.')"><i
+                        class="fa fa-volume-up"></i></button>
+            </div>
+
+            <div class="card" onmouseenter="showDetails('maths')" onmouseleave="hideDetails('maths')">
+                <img src="6.jpeg" alt="Maths Course">
+                <h3> Maths</h3>
+                <p>Mastering Maths: Basics to Advance</p>
+                <div class="course-details" id="maths-details" style="display: none;">
+                    <p>This comprehensive maths course covers essential concepts from arithmetic to advanced calculus.
+                        It emphasizes problem-solving techniques and mathematical reasoning, equipping students with the
+                        skills needed for academic success and everyday applications.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Stronger math foundation</li>
+                        <li>Enhanced critical thinking</li>
+                        <li>Better preparation for standardized tests</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Mastering Maths: Basics to Advance', 'This comprehensive maths course covers essential concepts from arithmetic to advanced calculus. It emphasizes problem-solving techniques and mathematical reasoning, equipping students with the skills needed for academic success and everyday applications. Benefits of this course include a stronger math foundation, enhanced critical thinking, and better preparation for standardized tests.')"><i
+                        class="fa fa-volume-up"></i></button>
+            </div>
+
+            <div class="card" onmouseenter="showDetails('english')" onmouseleave="hideDetails('english')">
+                <img src="5.jpeg" alt="English Course">
+                <h3>English</h3>
+                <p>Learn Complete English</p>
+                <div class="course-details" id="english-details" style="display: none;">
+                    <p>This English course focuses on grammar, vocabulary, and pronunciation. It includes reading
+                        comprehension exercises and writing workshops to enhance both verbal and written communication
+                        skills, catering to beginners and advanced learners alike.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Improved language skills</li>
+                        <li>Enhanced confidence in communication</li>
+                        <li>Better academic and career opportunities</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Learn Complete English', 'This English course focuses on grammar, vocabulary, and pronunciation. It includes reading comprehension exercises and writing workshops to enhance both verbal and written communication skills, catering to beginners and advanced learners alike. Benefits of this course include improved language skills, enhanced confidence in communication, and better academic and career opportunities.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+
+            <div class="card" onmouseenter="showDetails('social-science')" onmouseleave="hideDetails('social-science')">
+                <img src="4.jpeg" alt="Social Science Course">
+                <h3>Social Science</h3>
+                <p>Learn Social Science</p>
+                <div class="course-details" id="social-science-details" style="display: none;">
+                    <p>This course explores various aspects of social sciences, including sociology, psychology, and
+                        political science. Students will examine human behavior, social structures, and cultural
+                        dynamics, providing a comprehensive understanding of society.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Increased understanding of societal issues</li>
+                        <li>Development of critical analysis skills</li>
+                        <li>Preparation for careers in social work and education</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Laern Social Science', 'This course explores various aspects of social sciences, including sociology, psychology, and political science, allowing students to examine human behavior, social structures, and cultural dynamics for a comprehensive understanding of society. Benefits include increased understanding of societal issues, development of critical analysis skills, and preparation for careers in social work and education.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+
+            <div class="card" onmouseenter="showDetails('computer-science')"
+                onmouseleave="hideDetails('computer-science')">
+                <img src="3.jpeg" alt="Computer Science Course">
+                <h3>Computer Science</h3>
+                <p>Learn Computer Science</p>
+                <div class="course-details" id="computer-science-details" style="display: none;">
+                    <p>This computer science course introduces students to programming, algorithms, and data structures.
+                        It focuses on hands-on projects and real-world applications, preparing students for careers in
+                        technology and innovation.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Fundamental programming skills</li>
+                        <li>Problem-solving capabilities</li>
+                        <li>Career readiness in tech industries</li>
+                    </ul>
+                </div>
+                <label for="speak-text"></label>
+                <button
+                    onclick="readCourse('Learn Computer Science', 'This computer science course introduces students to programming, algorithms, and data structures. It focuses on hands-on projects and real-world applications, preparing students for careers in technology and innovation.Benefits of this course include: Fundamental programming skills, Problem-solving capabilities and Career readiness in tech industries')"><i
+                        class="fa fa-volume-up"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>Providing Education Creating Values.</p>
+        <div class="subscribe-container">
+            <input type="email" placeholder="Your Email" class="email-input">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+        <div class="footer-links">
+            <div>About Us</div>
+            <div>Contact Us</div>
+            <div>Videos</div>
+            <div>Social Media</div>
+        </div>
+        
+    </footer>
+
+
+    <!-- Adaptability Control Button -->
+    <button id="toggle-control-panel" onclick="toggleControlPanel()">Customize UI</button>
+
+    <!-- Adaptability Control Panel -->
+    <div class="control-panel" id="control-panel" style="display: none;">
+        <h3>Customize UI</h3>
+        <label for="font-size">Font Size:</label>
+        <input type="range" id="font-size" min="12" max="24" value="16" onchange="changeFontSize(this.value)">
+
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color" onchange="changeFontColor(this.value)">
+
+        <label for="bg-color">Background Color:</label>
+        <input type="color" id="bg-color" onchange="changeBgColor(this.value)">
+
+        <label for="text-spacing">Text Spacing:</label>
+        <input type="range" id="text-spacing" min="0" max="2" step="0.1" value="0"
+            onchange="changeTextSpacing(this.value)"> <!-- Set to 1 for normal spacing -->
+
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" min="1" max="3" step="0.1" value="2" onchange="changeContrast(this.value)">
+        <!-- Set to 2 for normal contrast -->
+
+
+        <label for="brightness">Brightness:</label>
+        <input type="range" id="brightness" min="0.5" max="2" step="0.1" value="1.25"
+            onchange="changeBrightness(this.value)">
+
+        <label for="font-style">Font Style:</label>
+        <select id="font-style" onchange="changeFontStyle(this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Dyslexie">Dyslexie</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Lucida Console">Lucida Console</option>
+        </select>
+
+        <label for="saturation">Saturation:</label>
+        <input type="range" id="saturation" min="0" max="2" step="0.1" value="1"
+            onchange="changeSaturation(this.value)">
+
+        <label for="theme">Theme:</label>
+        <button onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+
+        <label for="alignment">Text Alignment:</label>
+        <select id="alignment" onchange="setAlignment(this.value)">
+            <option value="">Select Alignment</option>
+            <option value="align-left">Left</option>
+            <option value="align-center">Center</option>
+            <option value="align-right">Right</option>
+        </select>
+
+        <label for="highlight-titles">Highlight Titles:</label>
+        <button onclick="highlightTitles()">Highlight</button>
+
+        <label for="speak-text">Text to speech:</label>
+        <button onclick="speakText()"><i class="fa fa-volume-up"></i></button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Adaptive Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Smart UI Logo" style="height: 40px;">
+            <span style="font-size: 24px; color: #fff; margin-left: 10px;">Smart UI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#footer">Blog</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            <button class="login" onclick="location.href='login.html'">Login</button>
+            <button class="signup" onclick="location.href='signup.html'">Signup</button>
+        </div>
+
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <h2>Login to Your Account</h2>
+        <form class="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        <p class="asking">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>Providing Education Creating Values.</p>
+        <div class="subscribe-container">
+            <input type="email" placeholder="Your Email" class="email-input">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+        <div class="footer-links">
+            <div>About Us</div>
+            <div>Contact Us</div>
+            <div>Videos</div>
+            <div>Social Media</div>
+        </div>
+        <p>Harshit Kumar (21BPS1109), Yash Sanjay Thakare (21BPS1271), and Sejal Pradhan (21BPS1034) &copy; 2024 Smart
+            UI. All rights reserved.</p>
+    </footer>
+
+    <!-- Adaptability Control Button -->
+    <button id="toggle-control-panel" onclick="toggleControlPanel()">Customize UI</button>
+
+    <!-- Adaptability Control Panel -->
+    <div class="control-panel" id="control-panel" style="display: none;">
+        <h3>Customize UI</h3>
+        <label for="font-size">Font Size:</label>
+        <input type="range" id="font-size" min="12" max="24" value="16" onchange="changeFontSize(this.value)">
+
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color" onchange="changeFontColor(this.value)">
+
+        <label for="bg-color">Background Color:</label>
+        <input type="color" id="bg-color" onchange="changeBgColor(this.value)">
+
+        <label for="text-spacing">Text Spacing:</label>
+        <input type="range" id="text-spacing" min="0" max="2" step="0.1" value="0"
+            onchange="changeTextSpacing(this.value)"> <!-- Set to 1 for normal spacing -->
+
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" min="1" max="3" step="0.1" value="2" onchange="changeContrast(this.value)">
+        <!-- Set to 2 for normal contrast -->
+
+
+        <label for="brightness">Brightness:</label>
+        <input type="range" id="brightness" min="0.5" max="2" step="0.1" value="1.25"
+            onchange="changeBrightness(this.value)">
+
+        <label for="font-style">Font Style:</label>
+        <select id="font-style" onchange="changeFontStyle(this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Dyslexie">Dyslexie</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Lucida Console">Lucida Console</option>
+        </select>
+
+        <label for="saturation">Saturation:</label>
+        <input type="range" id="saturation" min="0" max="2" step="0.1" value="1"
+            onchange="changeSaturation(this.value)">
+
+        <label for="theme">Theme:</label>
+        <button onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+
+        <label for="alignment">Text Alignment:</label>
+        <select id="alignment" onchange="setAlignment(this.value)">
+            <option value="">Select Alignment</option>
+            <option value="align-left">Left</option>
+            <option value="align-center">Center</option>
+            <option value="align-right">Right</option>
+        </select>
+
+        <label for="highlight-titles">Highlight Titles:</label>
+        <button onclick="highlightTitles()">Highlight</button>
+
+        <label for="speak-text">Text to speech:</label>
+        <button onclick="speakText()"><i class="fa fa-volume-up"></i></button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
